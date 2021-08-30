@@ -1,0 +1,364 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Flutter introduction",
+  "steps": [
+    {
+      "file": "lib/main.dart",
+      "description": "A Dart app must contains a `main` function. This function will be called at app launch.\n\nCalling `runApp` from Flutter Material will launch our Flutter app.\n\nThe new instance of `MyApp` pass as param is the first component that will be mounted.",
+      "line": 7,
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 7,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "`MyApp` is a component without without any state. This component will render a `MaterialApp` component. This component contains the configuration of our app, with the app title, theme colors, home page and so on. \n\n`MyHomePage(...)` is an instance of another component!",
+      "line": 21,
+      "selection": {
+        "start": {
+          "line": 9,
+          "character": 1
+        },
+        "end": {
+          "line": 21,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "Here is the `MyHomePage` component! This one is `stateful`, it means that some information (eg. the state) must persist through rerenders.",
+      "line": 30,
+      "selection": {
+        "start": {
+          "line": 23,
+          "character": 1
+        },
+        "end": {
+          "line": 30,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "And this is the state of our previous component. This class won't be lost (eg. recreated) during rerender! This component will render a tabs component. We will have two tabs: `CameraScreen` and `GalleryScreen`.",
+      "line": 61,
+      "selection": {
+        "start": {
+          "line": 32,
+          "character": 1
+        },
+        "end": {
+          "line": 59,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "The `CameraScreen` is a component with a state.",
+      "line": 12,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 12,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "Here is the state of our component",
+      "line": 14,
+      "selection": {
+        "start": {
+          "line": 14,
+          "character": 1
+        },
+        "end": {
+          "line": 14,
+          "character": 53
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "This line just makes the screen persistent even during navigation.",
+      "line": 15,
+      "selection": {
+        "start": {
+          "line": 15,
+          "character": 5
+        },
+        "end": {
+          "line": 15,
+          "character": 53
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "This method is called only once when the component is created",
+      "line": 26,
+      "selection": {
+        "start": {
+          "line": 22,
+          "character": 1
+        },
+        "end": {
+          "line": 26,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "This method will initiate the camera and wait (async/await) for the Camera plugin to confirm it's ready",
+      "line": 46,
+      "selection": {
+        "start": {
+          "line": 28,
+          "character": 1
+        },
+        "end": {
+          "line": 46,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "This method will be called only once when the component is unmounted. It's useful to clean up background jobs",
+      "line": 53,
+      "selection": {
+        "start": {
+          "line": 48,
+          "character": 1
+        },
+        "end": {
+          "line": 53,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "The `FutureBuilder` is an equivalent of React Suspense. The component will be rendered when a Future (eg. Promise) will be resolved.",
+      "line": 60,
+      "selection": {
+        "start": {
+          "line": 58,
+          "character": 5
+        },
+        "end": {
+          "line": 60,
+          "character": 37
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "Finally, we render a Column layout, containing the Camera Preview that should take most of the available space. We put the button at the bottom.",
+      "line": 84,
+      "selection": {
+        "start": {
+          "line": 63,
+          "character": 11
+        },
+        "end": {
+          "line": 84,
+          "character": 13
+        }
+      }
+    },
+    {
+      "file": "lib/camera.dart",
+      "description": "When the button is pressed, we get the current image of the camera, then we navigate to the `PictureScreen` with the image as param.",
+      "line": 79,
+      "selection": {
+        "start": {
+          "line": 71,
+          "character": 1
+        },
+        "end": {
+          "line": 79,
+          "character": 21
+        }
+      }
+    },
+    {
+      "file": "lib/picture.dart",
+      "description": "This screen will also have a state",
+      "line": 15,
+      "selection": {
+        "start": {
+          "line": 8,
+          "character": 1
+        },
+        "end": {
+          "line": 15,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/picture.dart",
+      "description": "We render the picture. `Expanded` is a component that will take all the available space. `widget.path` refers to a property available on the parent widget (eg. component). In our case, `widget.path` is the path of the picture we shot earlier, passed as param.",
+      "line": 30,
+      "selection": {
+        "start": {
+          "line": 28,
+          "character": 1
+        },
+        "end": {
+          "line": 30,
+          "character": 13
+        }
+      }
+    },
+    {
+      "file": "lib/picture.dart",
+      "description": "If cancel is clicked, we navigate back by popping the view",
+      "selection": {
+        "start": {
+          "line": 36,
+          "character": 19
+        },
+        "end": {
+          "line": 36,
+          "character": 64
+        }
+      }
+    },
+    {
+      "file": "lib/picture.dart",
+      "description": "If upload is pressed, then we navigate back, we display a loading by calling the `Loading` component, we forge a POST request and finally, we send this request to our server to store the picture. We wait (async/await) for the result and we go back.",
+      "selection": {
+        "start": {
+          "line": 42,
+          "character": 19
+        },
+        "end": {
+          "line": 53,
+          "character": 21
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "When we are not taking pictures, we are in the Gallery! This is also a component with a state",
+      "line": 12,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 12,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "This line makes the state persistent across navigations",
+      "line": 15,
+      "selection": {
+        "start": {
+          "line": 15,
+          "character": 5
+        },
+        "end": {
+          "line": 15,
+          "character": 54
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "We'll store the list of images we want to display",
+      "line": 16,
+      "selection": {
+        "start": {
+          "line": 16,
+          "character": 3
+        },
+        "end": {
+          "line": 16,
+          "character": 30
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "We init the component by calling the `_update` method in order to get the list of images",
+      "line": 24,
+      "selection": {
+        "start": {
+          "line": 21,
+          "character": 1
+        },
+        "end": {
+          "line": 24,
+          "character": 15
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "We add an interval that will update images every 4 seconds. This is not that pretty by it does work to update the list when I post a new picture ^.^'",
+      "line": 28,
+      "selection": {
+        "start": {
+          "line": 26,
+          "character": 1
+        },
+        "end": {
+          "line": 28,
+          "character": 8
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "The update method is pretty easy, it calls the server to get all images, then it will update the state and attribute to `this._images` the new value from the server.\n\nNote that the `setState` is mandatory to explain to Flutter that when this code is called, the component must be rerendered (in order to display new images!)",
+      "line": 45,
+      "selection": {
+        "start": {
+          "line": 31,
+          "character": 1
+        },
+        "end": {
+          "line": 45,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "lib/gallery.dart",
+      "description": "Finally, the widget renders all images using a List builder (eg. FlatList in React native).",
+      "line": 70,
+      "selection": {
+        "start": {
+          "line": 47,
+          "character": 1
+        },
+        "end": {
+          "line": 70,
+          "character": 4
+        }
+      }
+    }
+  ]
+}
