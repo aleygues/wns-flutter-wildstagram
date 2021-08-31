@@ -1,6 +1,10 @@
 # Wildstagram
 
-A new Flutter project. Clone the project and press F5 to make it run!
+A new Flutter project. Clone the project, run `flutter pub get` from the root folder to fetch the dependencies then press F5 from VSCode to launch the app!
+
+## Codetour
+
+If you have the CodeTour plugin installed on VSCode, you can start the tour to get some comments on how the app works!
 
 ## Getting Started
 
